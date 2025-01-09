@@ -1,0 +1,338 @@
+03-01-2025
+
+Rules for naming variables:
+1. Must start with a letter or underscore.
+Eg. _variable, myVar.
+Incorrect: 1variable.
+2. Can contain letters,numbers,underscores.Hyphens cannot be used.
+Eg. var_1,data_set.
+Incorrect: data-set.
+3. Case-Sensitive.
+Eg. myvar and myVar are considered as different variables.
+Incorrect: def = 10.
+4. Cannot use python keywords or built-in functions.
+Eg. if,else,class.
+Incorrect: print = "hello".
+
+04-01-2025
+Operations on Lists:
+--Concatenation:
+Concatenation of lists with numbers.
+Eg:
+list1 = [1, 2, 3]
+list2 = [4. 5. 6]
+list3 = list1 + list2
+print(list3)
+Concatenation of lists with strings.
+--Star Operation:
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+list3 = list1 * list2
+print(list3)
+
+06-01-2025
+
+Data Types:
+1. int:
+	--Behaviour: Fixed
+	--Order: Ordered
+	--Homogeneity: Homogeneous
+	--Default Value: '0'
+	--Demo:
+#Demo for int
+PROGRAM:
+my_int = 42
+print("Original Integer:", my_int)
+result = my_int * 2
+print("Result after multiplication:", result)
+OUTPUT:
+Original Integer: 42
+Result after multiplication: 84
+2.float:
+	--Behaviour: Fixed
+	--Order: 
+	--Homogeneity: 
+	--Default Value:
+	--Demo:
+3.string:
+	--Behaviour: Fixed
+	--Order: 
+	--Homogeneity:
+	--Default Value: 
+	--Demo:
+4.dict:
+	--Behaviour: mutable
+	--Order: Unordered
+	--Homogeneity: Heterogeneous
+	--Default Value: '{}'
+	--Demo:
+#Demo for dict
+PROGRAM:
+my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}
+print("Original dictionary:", my_dict)
+my_dict['age'] = 26
+print("Dictionary after age=26:", my_dict)
+OUTPUT:
+Original dictionary: {'name': 'John', 'age': 25, 'city': 'New York'}
+Dictionary after age=26: {'name': 'John', 'age': 26, 'city': 'New York'}
+5.list:
+	--Behaviour: mutable
+	--Order: Ordered
+	--Homogeneity: Heterogeneous
+	--Default Value: '[]'
+	--Demo:
+#Demo for list
+PROGRAM:
+my_list = [1, 'hello', 3.14, True]
+print("Original List:", my_list)
+my_list.append('world')
+print("List after appending 'world':", my_list)
+my_list.insert(0, 1)
+print("List after inserting at the beginning:", my_list)
+middle_index = len(my_list) // 2
+my_list.insert(middle_index, 3.5)
+print("List after inserting in the middle:", my_list)
+my_list.remove(3.14)
+print("List after removing 3.14:", my_list)
+OUTPUT:
+Original List: [1, 'hello', 3.14, True]
+List after appending 'world': [1, 'hello', 3.14, True, 'world']
+List after inserting at the beginning: [1, 1, 'hello', 3.14, True, 'world']
+List after inserting in the middle: [1, 1, 'hello', 3.5, 3.14, True, 'world']
+List after removing 3.14: [1, 1, 'hello', 3.5, True, 'world']
+6.tuple:
+	--Behaviour: Fixed
+	--Order: Ordered
+	--Homogeneity: Heterogeneous
+	--Default Value: '()'
+	--Demo:
+#Demo for tuple
+PROGRAM:
+my_tuple = (1, 'apple', 3.14, False)
+print("Original Tuple:", my_tuple)
+print("First element:", my_tuple[0])
+print("Last element:", my_tuple[-1])
+OUTPUT:
+Original Tuple: (1, 'apple', 3.14, False)
+First element: 1
+Last element: False
+7.set:
+	--Behaviour: mutable
+	--Order: Unordered
+	--Homogeneity: Homogeneous
+	--Default Value: 'set()'
+	--Demo:
+#Demo for set
+PROGRAM:
+my_set = {1, 2, 3, 4, 5}
+print("Original set:", my_set)
+my_set.add(6)
+print("Set after adding 6:", my_set)
+OUTPUT:
+Original set: {1, 2, 3, 4, 5}
+Set after adding 6: {1, 2, 3, 4, 5, 6}
+
+MACHINE LEARNING OVERVIEW:
+
+--It is a process that allows us to train our model to predict the future output.
+--ML is the subfield of computer science that gives "computer the ability to learn without being explicitly programmed."
+USECASES:
+Emails Classification
+Automobiles
+Prediction and Analysis
+ALGORITHM IN ML:
+--In ML, an algorithm is a set of mathematical instructions or procedures used to learn patterns or relationships from data.
+--Depending on the task(eg: Classification, Prediction,Analysis),different algorithms are applied.
+
+Slicing
+1.Slicing with step(start:stop:step)
+PROGRAM:
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print("\nSlicing with step(start:stop:step):")
+print(my_list[1:8:2])
+OUTPUT:
+Slicing with step(start:stop:step):
+[2, 4, 6, 8]
+2.Slicing with negative index
+PROGRAM:
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print("\nSlicing with negative index:")
+print(my_list[-5:-2])
+OUTPUT:
+Slicing with negative index:
+[6, 7, 8]
+3.Reversing the list using Slicing
+PROGRAM:
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print("\nReversing the list using Slicing:")
+print(my_list[::-1])
+OUTPUT:
+Reversing the list using Slicing:
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+**Create a list of lists representing fruits in different baskets.**
+PROGRAM:
+baskets = [
+    ['apple', 'banana', 'orange'],  # Basket 1
+    ['grape', 'strawberry', 'kiwi'], # Basket 2
+    ['mango', 'pineapple']          # Basket 3
+]
+
+# Print the fruits in the second basket
+print("Fruits in basket 2:", baskets[1])
+
+# Print the first fruit in the third basket
+print("First fruit in basket 3:", baskets[2][0])
+OUTPUT:
+Fruits in basket 2: ['grape', 'strawberry', 'kiwi']
+First fruit in basket 3: mango
+===========
+07-01-2025
+
+Functions
+1. Built-in Functions
+2.User-Define Functions
+
+what is the difference between function and method?
+how to find built-in methods in python?
+print(dir(str))
+**How to create user defined function?
+we must start function with def key word followed by function name, parameter.
+we can have function with default values. 
+
+**METHOD:
+PROGRAM:
+class Greeter:
+    def __init__(self, name):
+        self.name = name
+
+    def greet(self):  # Instance method
+        return f"Hello, {self.name}!"
+
+    @classmethod
+    def general_greet(cls):  # Class method
+        return "Hello, everyone!"
+
+    @staticmethod
+    def static_greet():  # Static method
+        return "Hello!"
+
+obj = Greeter("Alice")
+print(obj.greet())
+print(Greeter.general_greet())
+print(Greeter.static_greet())
+#Replacing word
+a = 'hello'
+b = a.replace('hello', 'hi')
+b = a.upper()
+print(b)
+OUTPUT:
+Hello, Alice!
+Hello, everyone!
+Hello!
+HELLO
+
+**FUNCTION:
+PROGRAM:
+def greet(name):
+    return f"Hello, {name}!"
+
+print(greet("Alice"))  # Output: Hello, Alice!
+OUTPUT:
+Hello, Alice!
+==========
+EXAMPLE PROGRAMS:
+#1
+c = '1234sf'
+d = c.isdigit()
+print(d)
+OUTPUT:
+False
+#2
+my_list = list(range(5,15,2))
+print(my_list)
+OUTPUT:
+[5, 7, 9, 11, 13]
+#3
+a = range(10)
+b = list(a)
+print(b)
+OUTPUT:
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+#4
+def add_numbers(a, b):
+  result = a + b
+  return result
+result2 = add_numbers(10, 2)
+print(result2)
+OUTPUT:
+12
+#5
+#function with *arg
+def calculate_sum(*args):
+    total = sum(args)
+    return total
+print("sum of 1,2,3,4 :", calculate_sum(1,2,3,4))
+print("sum of 1,2,3,4,5 :", calculate_sum(1,2,3,4,5))
+OUTPUT:
+sum of 1,2,3,4 : 10
+sum of 1,2,3,4,5 : 15
+
+A lambda function is an anonymous function, often referred as
+1.lambda function
+2.lambda expression
+3.lambda form
+syntax: lambda arguments: expression
+#Demo
+add = lambda x, y : x +y
+result = add(3,4
+print(result)
+OUTPUT:
+7
+#Palindrome or not
+is_palindrome = lambda s: s==s[::-1]
+print(is_palindrome("radar"))
+OUTPUT:
+True
+
+08-01-2025
+
+DATA SCIENCE
+KEY COMPONENTS:
+--Data Collection: gathering structured or unstructured data from various sources.
+--Data Processing(Data Profiling): cleaning and transforming data for effective analysis.
+--Data Analysis: using statistical and ML methods to uncover patterns and trends.
+--Visualization: presenting insights through charts, graphs and dashboards.(can use matplotlib,PowerBI,etc)
+Data science helps business harness the power of data to improve efficiency, innovation and completeness in today's data-driven landscape.
+==================
+PROGRAM:
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+years = [[2015],[2016],[2017],[2018]]
+values = [200, 300, 400, 500]
+years_train, years_test, values_train, values_test = train_test_split(years, values, test_size=0.2, random_state=42)
+model = LinearRegression()
+model.fit(years_train, values_train)
+future_year = [[2020]]
+predicted_value = model.predict(future_year)
+print(f"Predicted value for the year {future_year[0][0]}: {predicted_value[0]:.2f}")OUTPUT:
+OUTPUT:
+Predicted value for the year 2020: 700.00
+==================
+1.Supervised Learning
+2.Unsupervised Learning
+*Supervised Learning Algorithm: 
+--Classifies labelled data.
+--Predicts trends using previous labelled data.
+--Has more evaluation methods.
+--Controlled Environment.
+Key Algorithms:
+--Linear Regression
+--Logistic Regression
+--Support Vector Machine(SVM)
+--Decision Trees
+--Random Forest
+*Unsupervised Learning Algorithm:
+--Finds patterns and groupings from unlabelled data.
+--Has fewer evaluation methods.
+--Less Controlled Environment.
+
