@@ -1,0 +1,291 @@
+03-01-2025
+
+Rules for naming variables:
+1. Must start with a letter or underscore.
+Eg. _variable, myVar.
+Incorrect: 1variable.
+2. Can contain letters,numbers,underscores.Hyphens cannot be used.
+Eg. var_1,data_set.
+Incorrect: data-set.
+3. Case-Sensitive.
+Eg. myvar and myVar are considered as different variables.
+Incorrect: def = 10.
+4. Cannot use python keywords or built-in functions.
+Eg. if,else,class.
+Incorrect: print = "hello".
+
+04-01-2025
+Operations on Lists:
+--Concatenation:
+Concatenation of lists with numbers.
+Eg:
+list1 = [1, 2, 3]
+list2 = [4. 5. 6]
+list3 = list1 + list2
+print(list3)
+Concatenation of lists with strings.
+--Star Operation:
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+list3 = list1 * list2
+print(list3)
+
+06-01-2025
+
+Data Types:
+1. int:
+	--Behaviour: Fixed
+	--Order: Ordered
+	--Homogeneity: Homogeneous
+	--Default Value: '0'
+	--Demo:
+#Demo for int
+PROGRAM:
+my_int = 42
+print("Original Integer:", my_int)
+result = my_int * 2
+print("Result after multiplication:", result)
+OUTPUT:
+Original Integer: 42
+Result after multiplication: 84
+2.float
+3.string
+4.dict:
+	--Behaviour: mutable
+	--Order: Unordered
+	--Homogeneity: Heterogeneous
+	--Default Value: '{}'
+	--Demo:
+#Demo for dict
+PROGRAM:
+my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}
+print("Original dictionary:", my_dict)
+my_dict['age'] = 26
+print("Dictionary after age=26:", my_dict)
+OUTPUT:
+Original dictionary: {'name': 'John', 'age': 25, 'city': 'New York'}
+Dictionary after age=26: {'name': 'John', 'age': 26, 'city': 'New York'}
+5.list:
+	--Behaviour: mutable
+	--Order: Ordered
+	--Homogeneity: Heterogeneous
+	--Default Value: '[]'
+	--Demo:
+#Demo for list
+PROGRAM:
+my_list = [1, 'hello', 3.14, True]
+print("Original List:", my_list)
+my_list.append('world')
+print("List after appending 'world':", my_list)
+my_list.insert(0, 1)
+print("List after inserting at the beginning:", my_list)
+middle_index = len(my_list) // 2
+my_list.insert(middle_index, 3.5)
+print("List after inserting in the middle:", my_list)
+my_list.remove(3.14)
+print("List after removing 3.14:", my_list)
+OUTPUT:
+Original List: [1, 'hello', 3.14, True]
+List after appending 'world': [1, 'hello', 3.14, True, 'world']
+List after inserting at the beginning: [1, 1, 'hello', 3.14, True, 'world']
+List after inserting in the middle: [1, 1, 'hello', 3.5, 3.14, True, 'world']
+List after removing 3.14: [1, 1, 'hello', 3.5, True, 'world']
+6.tuple:
+	--Behaviour: Fixed
+	--Order: Ordered
+	--Homogeneity: Heterogeneous
+	--Default Value: '()'
+	--Demo:
+#Demo for tuple
+PROGRAM:
+my_tuple = (1, 'apple', 3.14, False)
+print("Original Tuple:", my_tuple)
+print("First element:", my_tuple[0])
+print("Last element:", my_tuple[-1])
+OUTPUT:
+Original Tuple: (1, 'apple', 3.14, False)
+First element: 1
+Last element: False
+7.set:
+	--Behaviour: mutable
+	--Order: Unordered
+	--Homogeneity: Homogeneous
+	--Default Value: 'set()'
+	--Demo:
+#Demo for set
+PROGRAM:
+my_set = {1, 2, 3, 4, 5}
+print("Original set:", my_set)
+my_set.add(6)
+print("Set after adding 6:", my_set)
+OUTPUT:
+Original set: {1, 2, 3, 4, 5}
+Set after adding 6: {1, 2, 3, 4, 5, 6}
+
+MACHINE LEARNING OVERVIEW:
+
+--It is a process that allows us to train our model to predict the future output.
+--ML is the subfield of computer science that gives "computer the ability to learn without being explicitly programmed."
+USECASES:
+Emails Classification
+Automobiles
+Prediction and Analysis
+ALGORITHM IN ML:
+--In ML, an algorithm is a set of mathematical instructions or procedures used to learn patterns or relationships from data.
+--Depending on the task(eg: Classification, Prediction,Analysis),different algorithms are applied.
+
+Slicing
+1.Slicing with step(start:stop:step)
+PROGRAM:
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print("\nSlicing with step(start:stop:step):")
+print(my_list[1:8:2])
+OUTPUT:
+Slicing with step(start:stop:step):
+[2, 4, 6, 8]
+2.Slicing with negative index
+PROGRAM:
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print("\nSlicing with negative index:")
+print(my_list[-5:-2])
+OUTPUT:
+Slicing with negative index:
+[6, 7, 8]
+3.Reversing the list using Slicing
+PROGRAM:
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print("\nReversing the list using Slicing:")
+print(my_list[::-1])
+OUTPUT:
+Reversing the list using Slicing:
+[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+**Create a list of lists representing fruits in different baskets.**
+PROGRAM:
+baskets = [
+    ['apple', 'banana', 'orange'],  # Basket 1
+    ['grape', 'strawberry', 'kiwi'], # Basket 2
+    ['mango', 'pineapple']          # Basket 3
+]
+
+# Print the fruits in the second basket
+print("Fruits in basket 2:", baskets[1])
+
+# Print the first fruit in the third basket
+print("First fruit in basket 3:", baskets[2][0])
+OUTPUT:
+Fruits in basket 2: ['grape', 'strawberry', 'kiwi']
+First fruit in basket 3: mango
+=============
+
+09-01-2025
+
+BASIC CHATBOT
+PROGRAM:
+import pyttsx3
+#initializze text to speech engine 
+engine = pyttsx3.init()
+
+def speak(text):
+    """Make the assistant speak."""
+    engine.say(text)
+    engine.runAndWait()
+    
+def main():
+    speak("Hello! I am your simple bot from Mallareddy College.")
+    speak("You can say hello, ask my name, or say goodbye")
+    
+    while True:
+        #get user input
+        command = input("You: ").lower()
+        
+        #respond to commands
+        if "hello" in command:
+            speak("Hi there! Welcome to Mallareddy College.")
+        elif "What's your name" in command or "what is your name" in command:
+            speak("My name is Simple Bot from Mallareddy College.")
+        elif "goodbye" in command:
+            speak("Goodbye! Have a great day at Mallareddy College.")
+            break
+        else:
+            speak("I didn't understand that. Please try again.")
+
+if __name__ == "__main__":
+    main()
+=================
+
+10-01-2025
+
+BASIC VOICE ASSISSTANT
+PROGRAM:
+import pyttsx3
+import speech_recognition as sr
+
+engine = pyttsx3.init()
+
+def speak(text):
+    """Make the assistant speak."""
+    engine.say(text)
+    engine.runAndWait()
+
+def listen():
+    """Listen to the user's voice command."""
+    recognizer = sr.Recognizer()
+    with sr.Microphone() as source:
+        speak("I am listening, please speak.")
+        try:
+            audio = recognizer.listen(source)
+            command = recognizer.recognize_google(audio)
+            return command.lower()
+        except sr.UnknownValueError:
+            speak("Sorry, I did not catch that.")
+            return ""
+def main():
+    """Main function to run the voice bot."""
+    speak("Hello! I am basic voice bot from Mallareddy University. You can say hello, ask my name, or say goodbye")
+
+    while True:
+        command = listen()
+
+        if "hello" in command:
+            speak("Hi there! Welcome to Mallareddy College.")
+        elif "What's your name" in command or "what is your name" in command:
+            speak("My name is Simple Bot from Mallareddy College.")
+        elif "goodbye" in command:
+            speak("Goodbye! Have a great day at Mallareddy College.")
+            break
+        else:
+            speak("I didn't understand that. Please try again.")
+
+if __name__ == "__main__":
+    main()
+
+**NLP**
+--NLP is a sub field of AI, and it closely overlaps with ML.
+--While NLP focuses on enabling computer to understand,interpret and generate human language.
+--Ml provides tools and algorithms to build a model.
+**NLTK LIBRARY**
+--Natural Language ToolKit is one of the most widely-used libraries in python for building programs that work with human language data.
+=================
+
+17-01-2025
+
+**What is a flask?**
+
+**Installation:**
+pip install flask
+
+After installation open an notepad and give name as app.py .
+Include the below code in the file:
+from flask import Flask
+app = Flask(__name__)
+@app.route('/')
+def hello_world():
+	return'Hello from malla reddy college'
+if __name__ ==' __main__':
+	app.run(debug=True)
+
+OUTPUT:
+It runs on the following server: http://127.0.0.1:5000
+
+
+
